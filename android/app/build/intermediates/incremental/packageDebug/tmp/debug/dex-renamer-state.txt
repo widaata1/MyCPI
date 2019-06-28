@@ -1,0 +1,4 @@
+#Fri Jun 28 10:01:09 EDT 2019
+base.0=C\:\\Users\\mwidaatalla\\MyCPI\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
