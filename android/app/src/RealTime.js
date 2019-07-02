@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Button } from 'react-native';
+import { Button } from 'react-native';
 import WorkCenter from './components/WorkCenter';
 
 class RealTime extends Component {
