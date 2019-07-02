@@ -7,7 +7,7 @@ const MainNavigator = createStackNavigator({
             screen: HomeScreen,
             navigationOptions: () => ({
                 header: null
-            }) 
+            }), 
         },
         Realtime: { 
             screen: RealTime

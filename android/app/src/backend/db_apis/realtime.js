@@ -4,13 +4,13 @@ const baseQuery =
 `select
     rtrim(eqno) as "WORK_CENTRE",
     rtrim(itemno) as "ITEMNO",
-    substr(descrip,1,40) as "DESCRIPTION",
+    rtrim(substr(descrip,1,40)) as "DESCRIPTION",
     workorder_id,
     partstogo,
-    ltrim(to_char(hours_left,'99.99')) as "HOURS_LEFT",
-    ltrim(to_char(std_cycle,'99.99')) as "STD_CYCLE",
-    ltrim(to_char(avg_cycle,'99.99')) as "AVG_CYCLE",
-    ltrim(to_char(last_cycle,'99.99')) as "LAST_CYCLE",
+    ltrim(to_char(hours_left,'999.99')) as "HOURS_LEFT",
+    ltrim(to_char(std_cycle,'999.99')) as "STD_CYCLE",
+    ltrim(to_char(avg_cycle,'999.99')) as "AVG_CYCLE",
+    ltrim(to_char(last_cycle,'999.99')) as "LAST_CYCLE",
     actcav,
     stdcav,
     ltrim(to_char(shift_up,'99.99')) as "SHIFT_UP",
@@ -18,7 +18,8 @@ const baseQuery =
     down_code,
     rtrim(down_descrip) as "DOWN_DESCRIP",
     orderno,
-    substr(priority_note,1,50) as "PRIORITY_NOTE"
+    substr(priority_note,1,50) as "PRIORITY_NOTE",
+    rtrim(substr(cntr_desc,1,30)) as "CNTR_DESC"
 from
     v_rt_part_numbers
 where
@@ -42,7 +43,9 @@ where
     5228,
     5257,
     5260,
-    5262)`;
+    5262)
+order by
+    cntr_desc asc`;
 
 async function find(context) {
     let query = baseQuery;

@@ -34,20 +34,17 @@ const pic1 =  require('/users/mwidaatalla/MyCPI/assets/images/menu.png');
 const pic2 =  require('/users/mwidaatalla/MyCPI/assets/images/arrow.png');  
 
 const styles = StyleSheet.create({
-    /* status: {
-        backgroundColor: 'green'
-    }, */
     toolbar: {
         height: 90,
-        marginTop: 24,
+        marginTop: 0,
         backgroundColor: 'lightgrey',
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center'
     },
     picture: {
-        height: 75,
-        width: 75,
+        height: 60,
+        width: 60,
     }
 });
 

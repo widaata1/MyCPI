@@ -8,13 +8,13 @@ class RealTime extends Component {
     } 
     static navigationOptions = ({ navigation }) => {
         return {
-            headerTitle: '     RealTime Monitor',
+            headerTitle: '         RealTime Monitor',
             headerStyle: { backgroundColor: 'lightgrey' },
-            headerTitleStyle: { color: 'firebrick', fontsize: 40 },
+            headerTitleStyle: { color: 'firebrick' },
             headerBackTitleStyle: { color: 'firebrick' },
             headerLeft: (
                 <Button
-                    title='Back'
+                    title='Home'
                     onPress={() => navigation.navigate('Home')}
                 />
             ),   
@@ -22,29 +22,7 @@ class RealTime extends Component {
     };
     render () {
         return (
-            <View>
-                <WorkCenter machine='LEAF'/>
-                <WorkCenter machine='AUDI'/>
-                <WorkCenter machine='BMW'/>
-                <WorkCenter machine='CAMARO'/>
-                <WorkCenter machine='DATSUN'/>
-                <WorkCenter machine='KARMA'/>
-                <WorkCenter machine='MALIBU'/>
-                <WorkCenter machine='FIAT'/>
-                <WorkCenter machine='DESOTO'/>
-                <WorkCenter machine='VENTURI'/>
-                <WorkCenter machine='VOLT'/>
-                <WorkCenter machine='CHALLENGER'/>
-                <WorkCenter machine='FERRARI'/>
-                <WorkCenter machine='TESLA'/>
-                <WorkCenter machine='JETTA'/>
-                <WorkCenter machine='PACKARD'/>
-                <WorkCenter machine='PORSCHE'/>
-                <WorkCenter machine='GMC'/>
-                <WorkCenter machine='STUDEBAKER'/>
-                <WorkCenter machine='SPARK'/>
-                <WorkCenter machine='TRIUMPH'/>
-            </View>
+            <WorkCenter/>
         );
     }
 }
